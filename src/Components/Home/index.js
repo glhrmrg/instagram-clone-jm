@@ -19,9 +19,18 @@ import { Stories } from '../Stories'
 export function Home() {
 
     const [likes, setLikes] = useState(100)
-    const [liked, setLikedActive] = useState(false)
+    const [likes2, setLikes2] = useState(5750)
+    const [likes3, setLikes3] = useState(250)
+    const [likes4, setLikes4] = useState(1800)
+    const [likes5, setLikes5] = useState(750)
 
-    //retorna like
+    const [liked, setLikedActive] = useState(false)
+    const [liked2, setLikedActive2] = useState(false)
+    const [liked3, setLikedActive3] = useState(false)
+    const [liked4, setLikedActive4] = useState(false)
+    const [liked5, setLikedActive5] = useState(false)
+
+    //retorna like do 1 post
     function like() {
         if (liked) {
             setLikedActive(false)
@@ -29,6 +38,50 @@ export function Home() {
         }else{
             setLikedActive(true)
             setLikes(likes+1)
+        }
+    }
+
+    //retorna like do 2 post
+    function like2() {
+        if (liked2) {
+            setLikedActive2(false)
+            setLikes2(likes2-1)
+        }else{
+            setLikedActive2(true)
+            setLikes2(likes2+1)
+        }
+    }
+
+    //retorna like do 3 post
+    function like3() {
+        if (liked3) {
+            setLikedActive3(false)
+            setLikes3(likes3-1)
+        }else{
+            setLikedActive3(true)
+            setLikes3(likes3+1)
+        }
+    }
+
+    //retorna like do 4 post
+    function like4() {
+        if (liked4) {
+            setLikedActive4(false)
+            setLikes4(likes4-1)
+        }else{
+            setLikedActive4(true)
+            setLikes4(likes4+1)
+        }
+    }
+
+    //retorna like do 5 post
+    function like5() {
+        if (liked5) {
+            setLikedActive5(false)
+            setLikes5(likes5-1)
+        }else{
+            setLikedActive5(true)
+            setLikes5(likes5+1)
         }
     }
 
@@ -124,10 +177,10 @@ export function Home() {
                     <img className="post-profile-pic" src={tsLogo} align="left" alt="Profile2" />
                     <p className="post-profile-name">taylorswift</p>
                     <img className= "post" src={post2}  alt="Post1" />
-                    <AiOutlineHeart className='heart-btn' onClick={like}/>
+                    <AiOutlineHeart className='heart-btn' onClick={like2}/>
                     <BsChat className='comment-btn'/>
                     <FiSend className='send-btn'/>
-                    <p className='likes-by'>Curtido por: <strong>{likes}</strong> pessoas</p>
+                    <p className='likes-by'>Curtido por: <strong>{likes2}</strong> pessoas</p>
                     <p className='pic-description'> <strong>taylorswift</strong>: Im enchanted to announce my next tour: 
                     Taylor Swift | The Eras Tour, a journey through the musical eras of my career. </p>
                     
@@ -143,10 +196,10 @@ export function Home() {
                     <img className="post-profile-pic" src={ufsmLogo} align="left" alt="Profile1" />
                     <p className="post-profile-name">ufsm.br</p>
                     <img className= "post" src={post3}  alt="Post1" />
-                    <AiOutlineHeart className='heart-btn' onClick={like}/>
+                    <AiOutlineHeart className='heart-btn' onClick={like3}/>
                     <BsChat className='comment-btn'/>
                     <FiSend className='send-btn'/>
-                    <p className='likes-by'>Curtido por: <strong>{likes}</strong> pessoas</p>
+                    <p className='likes-by'>Curtido por: <strong>{likes3}</strong> pessoas</p>
                     <p className='pic-description'> <strong>ufsm.br</strong>: Inscrições abertas, até dia 04/11, para seleção de Ingresso/Reingresso em Cursos de Graduação EAD da UFSM </p>
                     
                     {comments3.map((text) => (
@@ -162,10 +215,10 @@ export function Home() {
                     <img className="post-profile-pic" src={progradLogo} align="left" alt="Profile1" />
                     <p className="post-profile-name">progradufsm</p>
                     <img className= "post" src={post4}  alt="Post1" />
-                    <AiOutlineHeart className='heart-btn' onClick={like}/>
+                    <AiOutlineHeart className='heart-btn' onClick={like4}/>
                     <BsChat className='comment-btn'/>
                     <FiSend className='send-btn'/>
-                    <p className='likes-by'>Curtido por: <strong>{likes}</strong> pessoas</p>
+                    <p className='likes-by'>Curtido por: <strong>{likes4}</strong> pessoas</p>
                     <p className='pic-description'> <strong>progradufsm</strong>:  Inscrições até 6/11 no Teste de Suficiência em Leitura em Língua Estrangeira. </p>
                     
                     {comments4.map((text) => (
@@ -180,10 +233,10 @@ export function Home() {
                     <img className="post-profile-pic" src={ruLogo} align="left" alt="Profile1" />
                     <p className="post-profile-name">ru.ufsm.br</p>
                     <img className= "post" src={post5}  alt="Post1" />
-                    <AiOutlineHeart className='heart-btn' onClick={like}/>
+                    <AiOutlineHeart className='heart-btn' onClick={like5}/>
                     <BsChat className='comment-btn'/>
                     <FiSend className='send-btn'/>
-                    <p className='likes-by'>Curtido por: <strong>{likes}</strong> pessoas</p>
+                    <p className='likes-by'>Curtido por: <strong>{likes5}</strong> pessoas</p>
                     <p className='pic-description'> <strong>ru.ufsm.br</strong>: Alô, alô UFSMer da CEU!
                     O agendamento do kit de distribuição vai até às 11:00 de amanhã, não vai perder o prazo, ein! </p>
                     
