@@ -1,0 +1,21 @@
+.sidebar {
+    position: fixed;
+    width: 30px;
+    height: fill;
+    background-color: #FFFFFF;
+    border: 1px solid #EDEDED;
+}
+
+.sidebar a {
+    padding-left: 6px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.insta-icon {
+    padding-top: 10px;
+}
+
+.more-icon {
+    padding-top: 300px;
+}
